@@ -2,6 +2,5 @@
 
 def no_c(my_string):
 
-    new_string = my_string.translate({ord('c'): None, ord('C'): None})
-
-    return new_string
+  no_c = [i for i in my_string if i != 'c' and i != 'C']
+  return ("".join(no_c))
