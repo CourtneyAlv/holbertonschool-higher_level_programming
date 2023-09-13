@@ -2,7 +2,8 @@
 
 def update_dictionary(a_dictionary, key, value):
 
-    if key in a_dictionary:
-        a_dictionary[key] = value
-    else:
-        a_dictionary[key] = value
+    new_dictionary = a_dictionary.copy()
+
+    new_dictionary[key] = value
+
+    return new_dictionary
