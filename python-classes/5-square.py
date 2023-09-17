@@ -28,6 +28,5 @@ class Square:
         return self.__size**2
 
     def my_print(self):
-        # _ is a placeholder for a variable that you dont need in a loop
         for _ in range(self.__size):
             print('#' * self.__size)
