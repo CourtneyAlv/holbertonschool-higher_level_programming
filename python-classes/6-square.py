@@ -8,7 +8,7 @@ class Square:
         """ init method initializing a size attribute
                 Args:
                 size: (obj: int) Size is calulating the area of a square
-                position: represents a point or a location and stored in a
+                position (int, int): represents a point or a location and stored in a
                 tuple"""
 
         self.__size = size
@@ -49,6 +49,6 @@ class Square:
             return
         [print("") for i in range(0, self.__position[1])]
         for i in range(0, self.__size):
-            [print(" ", end="") for j in range(0, self.__position[0])]
+            [print("-", end="") for j in range(0, self.__position[0])]
             [print("#", end="") for k in range(0, self.__size)]
             print("")
