@@ -16,6 +16,7 @@ class Square:
 
     @property
     def size(self):
+    """ Setting the size of the square"""
         return self.__size
 
     @size.setter
@@ -40,9 +41,11 @@ class Square:
         self.__position = value
 
     def area(self):
+        """ Returning the area of the square"""
         return self.__size**2
 
     def my_print(self):
+        """print the # for the square """
         # _ is a placeholder for a variable that you dont need in a loop
         if self.__size == 0:
             print("")
