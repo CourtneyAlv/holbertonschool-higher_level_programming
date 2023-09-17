@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-Square = __import__('1-square').Square
+""" Defining a class Square """
 
-my_square = Square(3)
-print(type(my_square))
-print(my_square.__dict__)
 
-try:
-    print(my_square.size)
-except Exception as e:
-    print(e)
+class Square:
+    """Represent a Square """
+    def __init__(self, size):
+        """ init method initializing a size attribute
+                Args:
+                size: (obj: int) Size is calulating the area of a square"""
 
-try:
-    print(my_square.__size)
-except Exception as e:
-    print(e)
+        self.__size = size
+
+
+size = Square(None)
