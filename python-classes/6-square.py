@@ -47,7 +47,6 @@ class Square:
         # _ is a placeholder for a variable that you dont need in a loop
         if self.__size == 0:
             print("")
-            return
         else:
             x, y = self.__position
             for _ in range(y):
