@@ -20,13 +20,15 @@ class Square:
             raise TypeError('size must be an integer')
         if value < 0:
             raise ValueError('size must be >= 0')
-        if value == 0:
-            print()
+
         self.__size = value
 
     def area(self):
         return self.__size**2
 
     def my_print(self):
+        # _ is a placeholder for a variable that you dont need in a loop
         for _ in range(self.__size):
             print('#' * self.__size)
+        if self.__size == 0:
+            print("")
