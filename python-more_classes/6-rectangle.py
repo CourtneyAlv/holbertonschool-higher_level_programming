@@ -3,8 +3,11 @@
 
 
 class Rectangle:
+    """Represent a Rectangle
+            Attributes:
+            number_of_instances (int): the number of Rectangle instances"""
     number_of_instances = 0
-    "Represent a Rectangle"
+
     def __init__(self, width=0, height=0):
         """ init method creating a new rectangle
                 Args:
