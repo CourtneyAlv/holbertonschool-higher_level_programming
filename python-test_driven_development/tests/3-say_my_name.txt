@@ -15,15 +15,15 @@ My name is Courtney
 
 Testing if first_name is a string
 
->>> say_my_name(32, 'Pancake')
+>>> say_my_name(['Courtney'], 'Pancake')
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
 >>>
 
-Testing if last_name_name is a string
+Testing if last_name is a string
 
->>> say_my_name('Pancake', 32)
+>>> say_my_name('Pancake', ['Courtney'])
 Traceback (most recent call last):
 ...
 TypeError: last_name must be a string
