@@ -17,27 +17,27 @@ My name is Courtney
 
 Testing if first_name is a string
 
->>> say_my_name(['Courtney'], 'Pancake')
+>>> say_my_name(777, "Pancake")
 Traceback (most recent call last):
-...
 TypeError: first_name must be a string
 >>>
-
 
 
 Testing if last_name is a string
 
->>> say_my_name('Pancake', ['Courtney'])
+>>> say_my_name("Pancake", 777)
 Traceback (most recent call last):
-...
 TypeError: last_name must be a string
 >>>
 
-
-
 >>> say_my_name(None)
 Traceback (most recent call last):
-...
 TypeError: first_name must be a string
 >>>
 
+>>> say_my_name({'Pancake': 6, 'Courtney': 29}, 12.0)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+>>>
+
+'''
