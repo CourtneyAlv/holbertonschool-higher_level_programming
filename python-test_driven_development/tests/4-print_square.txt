@@ -1,0 +1,31 @@
+def print_square(size):
+'''
+Testing a function that prints a square with the character #
+
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square(3)
+###
+###
+###
+>>>
+
+Testing if less than 0
+
+>>> print_square(-3)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+>>>
+
+Testing floating point numbers
+
+>>> print_square(1.0)
+Traceback (most recent call last):
+TypeError: size must be an integer
+>>>
+
+Test if string
+
+>>> print_square('A')
+Traceback (most recent call last):
+TypeError: size must be an integer
+>>>
