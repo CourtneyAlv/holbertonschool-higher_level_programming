@@ -13,6 +13,8 @@ Testing if using a single parameter(first_name)
 >>> say_my_name('Courtney')
 My name is Courtney 
 
+
+
 Testing if first_name is a string
 
 >>> say_my_name(['Courtney'], 'Pancake')
@@ -20,6 +22,8 @@ Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
 >>>
+
+
 
 Testing if last_name is a string
 
@@ -30,4 +34,10 @@ TypeError: last_name must be a string
 >>>
 
 
-'''
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>>
+
