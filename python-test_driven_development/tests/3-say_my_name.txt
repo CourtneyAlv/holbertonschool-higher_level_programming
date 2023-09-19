@@ -1,0 +1,34 @@
+def say_my_name(first_name, last_name=""):
+'''
+Testing a function that prints first_name and last_name and it must be strings
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name('Courtney', 'Alvarado')
+My name is Courtney Alvarado
+>>>
+
+
+Testing if using a single parameter(first_name)
+
+>>> say_my_name('Courtney')
+My name is Courtney
+>>>
+
+Testing if first_name is a string
+
+>>> say_my_name(32, 'Pancake')
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>>
+
+Testing if last_name_name is a string
+
+>>> say_my_name('Pancake', 32)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+>>>
+
+
+'''
