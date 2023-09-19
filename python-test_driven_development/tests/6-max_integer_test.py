@@ -25,7 +25,8 @@ class TestMxInteger(unittest.TestCase):
     
     def test_max_int_one_element(self):
         result = [3]
-        self.assertEqual(max_integer(result), 7)
+        self.assertEqual(max_integer(result), 3)
+
 
     '''def test_max_integer_with_strings(self):
         result = max_integer([1, 5, 'three', 7, 2])
