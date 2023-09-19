@@ -14,5 +14,5 @@ def say_my_name(first_name, last_name=""):
     if last_name:
         full_name = first_name + " " + last_name
     else:
-        full_name = first_name
+        full_name = first_name + " "
     print("My name is", full_name)

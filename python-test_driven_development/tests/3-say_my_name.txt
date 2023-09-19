@@ -11,8 +11,7 @@ My name is Courtney Alvarado
 Testing if using a single parameter(first_name)
 
 >>> say_my_name('Courtney')
-My name is Courtney
->>>
+My name is Courtney 
 
 Testing if first_name is a string
 
