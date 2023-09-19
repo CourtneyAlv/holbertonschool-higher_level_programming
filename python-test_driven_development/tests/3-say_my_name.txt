@@ -25,7 +25,7 @@ TypeError: first_name must be a string
 
 Testing if last_name is a string
 
->>> say_my_name("Pancake", 777)
+>>> say_my_name("Pancake", ['fire', 'water'])
 Traceback (most recent call last):
 TypeError: last_name must be a string
 >>>
