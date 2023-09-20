@@ -10,5 +10,6 @@ Tired
 
 >>> text_indentation("   Im Sleepy.")
 Im Sleepy.
+<BLANKLINE>
 >>>
 
