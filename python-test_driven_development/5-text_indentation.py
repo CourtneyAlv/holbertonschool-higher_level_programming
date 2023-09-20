@@ -26,7 +26,7 @@ def text_indentation(text):
             new_line = False
         elif char == " " and not new_line:
             result += char
-        
-    result = result.strip()
+    if text.strip()[-1] in [".", "?", ":"]:
+        result = result.strip()
 
     print(result)
