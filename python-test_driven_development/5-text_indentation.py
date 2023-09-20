@@ -21,6 +21,6 @@ def text_indentation(text):
         if char in ".?:":
             sentences.append(orig_sentence.strip())
             orig_sentence = ""
+    formatted_text = '\n\n'.join(sentences)
 
-    for sentence in sentences:
-        print(sentence)
+    print(formatted_text)
