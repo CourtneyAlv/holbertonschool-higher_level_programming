@@ -3,13 +3,16 @@ def text_indentation(text):
 Testing a function that prints a text with 2 new lines after each character ., ?, :
 
 >>> text_indentation = __import__('5-text_indentation').text_indentation
->>>text_indentation("Tired")
-Tired
+>>> text_indentation("Tired")
+<BLANKLINE>
 >>>
 
 
->>> text_indentation = ("   Im Sleepy.")
+>>> text_indentation("   Im Sleepy.")
 Im Sleepy.
 >>>
 
->>> text_indentation =
+>>> text_indentation("Im Sleepy.    ")
+Im Sleepy.
+<BLANKLINE>
+>>>
