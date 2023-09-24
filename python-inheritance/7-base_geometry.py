@@ -4,11 +4,10 @@
 
 class BaseGeometry:
     """Defines an empty class"""
+
     def area(self):
         """ Computes the area of the geometry
-            The method is not implemented in the base class
-            Raises
-                Exception: raise exception if are() id not implemented"""
+            The method is not implemented in the base class"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
@@ -21,7 +20,7 @@ class BaseGeometry:
                 ValueError: if less than or equal to 0
                 """
 
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
