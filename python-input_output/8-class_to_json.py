@@ -11,9 +11,4 @@ def class_to_json(obj):
         Returns:
             dict: dictionary rep
         """
-
-    serialized_data = {}
-    for key, value in obj.__dict__.items():
-        if isinstance(value, (list, dict, str, int, bool)):
-            serialized_data[key] = value
-    return serialized_data
+    return obj.__dict__
