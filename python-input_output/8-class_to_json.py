@@ -11,8 +11,6 @@ def class_to_json(obj):
         Returns:
             dict: dictionary rep
         """
-    if not hasattr(obj, '__dict__'):
-        raise TypeError("object must have '__dict__ attribute for serializing")
 
     serialized_data = {}
     for key, value in obj.__dict__.items():
