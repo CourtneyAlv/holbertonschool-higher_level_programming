@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 
 """Define a base class model"""
-import json
-import csv
-
 
 class Base:
     """ Represent a Base Class"""
