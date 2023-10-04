@@ -2,7 +2,7 @@
 """Unittest for recatangle"""
 
 import unittest
-from models.base import Base
+from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
@@ -39,6 +39,22 @@ class TestRectangle(unittest.TestCase):
     def test_dict_rep(self):
         r = Rectangle(2, 4, 6, 8, 9)
         dicts = {'id': 9, 'width': 2, 'height': 4, 'x': 6, 'y': 8}
+
+    def test_no_args(self):
+        with self.assertRaises(TypeError):
+            Rectangle(3)
+
+    def test_three_args(self):
+        r1 = Rectangle(7, 4)
+        r2 = Rectangle(4, 7)
+        self.assertEqual(r1.id, r2.id - 1)
+
+    def test_three_args(self):
+        r1 = Rectangle(7, 7, 5)
+        r2 = Rectangle(5, 5, 7)
+        self.assertEqual(r1.id, r2.id - 1)
+
+
 
 
 if __name__ == '__main__':

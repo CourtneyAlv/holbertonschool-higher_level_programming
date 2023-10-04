@@ -36,3 +36,4 @@ class TestBase_to_json_string(unittest.TestCase):
         data = [{"id": 1, "name": "Courtney"}, {"id": 2, "name": "Pancake"}]
         json_str = Base.to_json_string(data)
         self.assertEqual(json_str, '[{"id": 1, "name": "Courtney"}, {"id": 2, "name": "Pancake"}]')
+    
