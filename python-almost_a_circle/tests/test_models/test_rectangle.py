@@ -92,6 +92,32 @@ class TestRectangle_width(unittest.TestCase):
     def test_list_width(self): 
         with self.assertRaisesRegex(TypeError, "width must be an integer"): 
             Rectangle ([1, 2, 3], 2) 
+    
+    def test_set_width(self): 
+        with self.assertRaisesRegex(TypeError, "width must be an integer"): 
+            Rectangle ((1, 2, 3), 2) 
+    
+    def test_tuple_width(self): 
+        with self.assertRaisesRegex(TypeError, "width must be an integer"): 
+            Rectangle ( (1, 2, 3), 2) 
+    
+    def test_frozenset_width(self): 
+        with self.assertRaisesRegex(TypeError, "width must be an integer"): 
+            Rectangle (frozenset ({1, 2, 3, 11}), 2) 
+    
+    def test_range_width(self) : 
+        with self.assertRaisesRegex(TypeError, "width must be an integer"): 
+            Rectangle (range (5), 2) 
+    
+    def test_bytes_width(self): 
+        with self.assertRaisesRegex(TypeError, "width must be an integer"): 
+            Rectangle (b' Python', 2) 
+    
+    def test_memoryview_width(self): 
+        with self.assertRaisesRegex(TypeError, "width must be an integer"): 
+            Rectangle (memoryview (b' abcedg' ) , 2) 
 
-if __name__ == '__main__':
+
+
+if __name__ == "__main__":
     unittest.main()
