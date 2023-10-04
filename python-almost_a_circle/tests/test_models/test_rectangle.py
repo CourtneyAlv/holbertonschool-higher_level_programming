@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 """Unittest for recatangle"""
 
+import io
 import unittest
+import sys
+from models.base import Base
 from models.rectangle import Rectangle
 
 
@@ -65,9 +68,7 @@ class TestRectangle(unittest.TestCase):
     def test_more_than_five_args(self):
         with self.assertRaises(TypeError):
             Rectangle(13, 2, 3, 3, 7, 8)
-
-class TestRectangle_width(unittest.TestCase):
-    """**Unittests for testing initialization of Rectangle width attribute""" 
+ 
     
     def test_None_width(self): 
         with self.assertRaisesRegex(TypeError, "width must be an integer"): 
