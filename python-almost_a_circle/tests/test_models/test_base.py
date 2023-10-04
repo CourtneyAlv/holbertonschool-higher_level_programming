@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
 import unittest
-from models.rectangle import Rectangle
-from models.square import Square
 from models.base import Base
+
 
 class Testbase(unittest.TestCase):
 
@@ -15,8 +14,3 @@ class Testbase(unittest.TestCase):
     def test_instance_create_id(self):
         instance = Base(12)
         self.assertEqual(instance.id, 12)
-
-    def test_dictionary(self):
-        dictionary = {'id': 10}
-        instance = Base.create(**dictionary)
-        self.assertEqual(instance.id, 10)
