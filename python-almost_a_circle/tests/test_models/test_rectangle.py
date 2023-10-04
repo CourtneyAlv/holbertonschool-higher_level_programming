@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """Unittest for recatangle"""
 
-import io
 import unittest
-import sys
 from models.base import Base
 from models.rectangle import Rectangle
 
