@@ -3,34 +3,17 @@
 import sys
 import MYSQLdb
 
+if __name__ == "__main__"
+    db = MYSQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
 
-def list_states(username, password, database):
-    """
-        lists all states from the database hbtn_0e_0_usa
-        ARGS:
-            username: MYSQL Username
-            password: MYSQL password
-            dtatbase: dtatabase name
-    """
+    cursor = db.cursor()
 
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
-db = MYSQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
+    list_st = cursor.fetchall()
 
-cursor = db.cursor()
+    for list_st in list_sts:
+        print(list_st)
 
-cursor.execute("SELECT * FROM states ORDER BY id ASC")
-
-list_st = cursor.fetchall()
-
-for list_st in list_sts:
-    print(list_st)
-
-cursor.close()
-db.close()
-
-if __name__ == "__main__":
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
-
-list_states(username, password, database)
+    cursor.close()
+    db.close()
