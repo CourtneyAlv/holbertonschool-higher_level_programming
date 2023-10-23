@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    query = "SELECT * FROM cities WHERE state_id IN " /
+    query = "SELECT * FROM cities WHERE state_id IN " \
         "(SELECT id FROM states WHERE name = %s) ORDER BY cities.id ASC"
     cursor.execute(query, (state_name,))
 
