@@ -14,7 +14,7 @@ def list_states(username, password, database):
     """
 
 
-db = MYSQLdb.connect(
+db = MySQLdb.connect(
     host="localhost",
     port=3306,
     user=username,
