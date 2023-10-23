@@ -14,8 +14,6 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    state_name = sys.argv[4]
-
     query = "SELECT * FROM cities ORDER BY id ASC"
     cursor.execute(query)
 
