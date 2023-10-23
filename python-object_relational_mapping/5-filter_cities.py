@@ -12,7 +12,7 @@ if __name__ == "__main__":
         db=sys.argv[3]
     )
 
-  stat_name = sys.argv[4]
+    state_name = sys.argv[4]
 
     cursor = db.cursor()
 
