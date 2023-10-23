@@ -3,15 +3,17 @@
 import sys
 import MYSQLdb
 
+
 def list_states(username, password, database):
-    """ 
+    """
         lists all states from the database hbtn_0e_0_usa
         ARGS:
             username: MYSQL Username
             password: MYSQL password
             dtatbase: dtatabase name
     """
-    
+
+
 db = MYSQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
 
 cursor = db.cursor()
