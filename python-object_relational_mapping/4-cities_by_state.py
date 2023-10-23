@@ -13,8 +13,12 @@ if __name__ == "__main__":
     )
 
     cursor = db.cursor()
-    
-    cursor.execute("SELECT * FROM cities ORDER BY id ASC")
+
+    state_name = sys.argv[4]
+
+    query = "SELECT * FROM cities " \
+            "ORDER BY id ASC"
+    cursor.execute(query)
 
     result_cities = cursor.fetchall()
 
