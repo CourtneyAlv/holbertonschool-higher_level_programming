@@ -3,7 +3,7 @@
 import sys
 import MYSQLdb
 
-def list_states(username, password, database_name):
+def list_states(username, password, database):
     """ 
         lists all states from the database hbtn_0e_0_usa
         ARGS:
@@ -12,16 +12,16 @@ def list_states(username, password, database_name):
             dtatbase: dtatabase name
     """
     
-db = MYSQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database_name)
+db = MYSQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
 
 cursor = db.cursor()
 
 cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
-states = cursor.fetchall()
+list_st = cursor.fetchall()
 
-for state in states:
-    print(state)
+for list_st in list_sts:
+    print(list_st)
 
 cursor.close()
 db.close()
