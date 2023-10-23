@@ -16,14 +16,13 @@ if __name__ == "__main__":
 
     state_name = sys.argv[4]
 
-    query = "SELECT * FROM cities " \
-            "ORDER BY id ASC"
+    query = "SELECT * FROM cities ORDER BY id ASC"
     cursor.execute(query)
 
-    result_cities = cursor.fetchall()
+    result_states = cursor.fetchall()
 
     for city in result_cities:
-        print(city)
+        print(cities)
 
     cursor.close()
     db.close()
