@@ -20,7 +20,7 @@ if __name__ == "__main__":
     result_cities = cursor.fetchall()
 
     for city in result_cities:
-        print(cities)
+        print(city)
 
     cursor.close()
     db.close()
