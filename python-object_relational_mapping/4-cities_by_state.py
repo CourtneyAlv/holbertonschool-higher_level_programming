@@ -17,7 +17,7 @@ if __name__ == "__main__":
     query = "SELECT * FROM cities ORDER BY id ASC"
     cursor.execute(query)
 
-    result_states = cursor.fetchall()
+    result_cities = cursor.fetchall()
 
     for city in result_cities:
         print(cities)
