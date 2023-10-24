@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     result_cities = cursor.fetchall()
 
-    que = list(row[0] for city in result_cities)
+    que = list(city[0] for city in result_cities)
     print(*que, sep=", ")
 
     cursor.close()
