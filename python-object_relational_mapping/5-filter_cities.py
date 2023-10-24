@@ -13,18 +13,16 @@ if __name__ == "__main__":
         db=sys.argv[3]
     )
 
-    state_name = sys.argv[4]
-
     cursor = db.cursor()
 
-    query = "SELECT * FROM cities WHERE state_id IN " \
-        "(SELECT id FROM states WHERE name = %s) ORDER BY cities.id ASC"
-    cursor.execute(query, (state_name,))
+    cursor.execute("""SELECT cities.name FROM 
+            cities INNER JOIN states ON states.id=cities.state_id
+            WHERE states.name=%s""", (sys.argv[4],))
 
     result_cities = cursor.fetchall()
 
-    for city in result_cities:
-        print(city)
+    que = list(row[0] for city in result_cities)
+        print(*que, sep=", ")
 
     cursor.close()
     db.close()
