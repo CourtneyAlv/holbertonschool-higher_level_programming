@@ -15,14 +15,14 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    cursor.execute("""SELECT cities.name FROM 
+    cursor.execute("""SELECT cities.name FROM
             cities INNER JOIN states ON states.id=cities.state_id
             WHERE states.name=%s""", (sys.argv[4],))
 
     result_cities = cursor.fetchall()
 
     que = list(row[0] for city in result_cities)
-        print(*que, sep=", ")
+    print(*que, sep=", ")
 
     cursor.close()
     db.close()
