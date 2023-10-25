@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that adds the State object “Louisiana” 
+"""script that adds the State object “Louisiana”
 to the database hbtn_0e_6_usa"""
 from model_state import Base, State
 from sqlalchemy import create_engine
@@ -13,7 +13,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    new_state = State(name='Lousiana')
+    new_state = State(name='Louisiana')
     session.add(new_state)
     new_inst = session.query(State).filter_by(name='Louisiana').first()
     print(new_inst.id)
